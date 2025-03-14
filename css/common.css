@@ -1,0 +1,88 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=ZCOOL+QingKe+HuangYou&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+
+    --black: #222222;
+    --white: #ffffff;
+    
+    --txt: var(--black);
+    --sub-txt: #787878;
+
+    --bg: #FFFEFC;
+
+}
+
+/* S : scrollbar */
+
+    /* ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+        background-color: #F5F5F5;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #FF9292;
+    } */
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.3); 
+    }
+
+/* E : scrollbar */
+
+/* S : layout */
+
+    /* S : header */
+        #header .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+            padding: 0 1.5rem;
+        }
+        #header nav ul {
+            display: flex;
+            align-items: center;
+        }
+        #header nav ul li {
+            padding: 0 1rem;
+            font-weight: 500;
+        }
+        #header .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+    /* E : header */
+
+    #wrap {
+        width: 100%;
+        height: 100vh;
+        padding: 2rem;
+        background: var(--bg);
+    }
+    #wrap .inner {
+        width: 100%;
+        height: 100%;
+        outline: 6px solid var(--black);
+        overflow-y: auto;
+    }
+
+    #content-wrap {
+        padding: 1.5rem;
+    }
+
+    #contents {
+        max-width: 1600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+/* E : layout */

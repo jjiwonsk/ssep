@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* S : 메인 */
+    .page-main .main-title {
+        padding: 100px 0 120px;
+        text-align: center;
+    }
+    .page-main .main-title h1 {
+        font-size: 10rem;
+        font-weight: 800;
+    }
+    .page-main .main-title dl dt {
+        margin-top: 2rem;
+        font-size: 2.25rem;
+        font-weight: 700;
+    }
+    .page-main .main-title dl dd {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        color: var(--sub-txt);
+    }
+
+    .page-main .project-container {
+        border: 2px solid var(--black);
+        border-right: none;
+    }
+/* E : 메인 */
