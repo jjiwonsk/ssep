@@ -16,18 +16,6 @@
 
 /* S : scrollbar */
 
-    /* ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-        background-color: #F5F5F5;
-    }
-    ::-webkit-scrollbar {
-        width: 6px;
-        background-color: #F5F5F5;
-    }
-    ::-webkit-scrollbar-thumb {
-        background-color: #FF9292;
-    } */
-
     ::-webkit-scrollbar {
         width: 4px;
     }
@@ -53,11 +41,14 @@
             align-items: center;
         }
         #header nav ul li {
-            padding: 0 1rem;
+            padding: 0 16px;
             font-weight: 500;
         }
+        #header nav ul li:hover {
+            opacity: 0.8;
+        }
         #header .logo {
-            font-size: 1.5rem;
+            font-size: 24px;
             font-weight: 900;
         }
     /* E : header */
@@ -65,7 +56,7 @@
     #wrap {
         width: 100%;
         height: 100vh;
-        padding: 2rem;
+        padding: 32px;
         background: var(--bg);
     }
     #wrap .inner {
@@ -76,13 +67,36 @@
     }
 
     #content-wrap {
-        padding: 1.5rem;
+        padding: 24px 24px 120px 24px;
     }
 
     #contents {
         max-width: 1600px;
         width: 100%;
         margin: 0 auto;
+    }
+
+    /* S : floating */
+        .floating-wrap {
+            position: fixed;
+            right: 52px;
+            bottom: 52px;
+        }
+        .floating-wrap .btn-float {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            background: var(--black);
+        }
+    /* E : floating */
+
+    @media (max-width: 767px) {
+        #header nav ul li {
+            padding: 0 8px;
+        }
     }
 
 /* E : layout */

@@ -2,27 +2,214 @@
 
 /* S : 메인 */
     .page-main .main-title {
-        padding: 100px 0 120px;
+        padding: 100px 0 120px 0;
         text-align: center;
     }
+    .page-main .main-title .img-box {
+        position: relative;
+        width: 314px;
+        height: 213px;
+        margin: 0 auto;
+        background: url("/img/main/main_default.png") no-repeat center center/contain;
+    }
+    .page-main .main-title .img-box:hover {
+        background: url("/img/main/main_hover.png") no-repeat center center/contain;
+    }
+    .page-main .main-title .img-box .heart {
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: pulse;
+        -webkit-animation-name: pulse;	
+        animation-duration: 1.5s;	
+        -webkit-animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    /* .heart 애니메이션 */
+    @keyframes pulse {
+        0% {
+            transform: scale(0.9);
+        }
+        50% {
+            transform: scale(1);
+        }	
+        100% {
+            transform: scale(0.9);
+        }			
+    }
+    @-webkit-keyframes pulse {
+        0% {
+            -webkit-transform: scale(0.9);
+        }
+        50% {
+            -webkit-transform: scale(1);
+        }	
+        100% {
+            -webkit-transform: scale(0.9);
+        }			
+    }
+
+    .page-main .main-title .img-box .hand {
+        position: absolute;
+        bottom: 6%;
+        right: 3%;
+        animation-name: tossing;
+        -webkit-animation-name: tossing;	
+        animation-duration: 1.5s;	
+        -webkit-animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+    }
+
+    /* .hand 애니메이션 */
+    @keyframes tossing {
+        0% {
+            transform: rotate(-3.5deg);	
+        }
+        50% {
+            transform: rotate(3.5deg);
+        }
+        100% {
+            transform: rotate(-3.5deg);	
+        }						
+    }
+    @-webkit-keyframes tossing {
+        0% {
+            -webkit-transform: rotate(-3.5deg);	
+        }
+        50% {
+            -webkit-transform: rotate(3.5deg);
+        }
+        100% {
+            -webkit-transform: rotate(-3.5deg);	
+        }				
+    }
+
     .page-main .main-title h1 {
-        font-size: 10rem;
+        font-size: 160px;
         font-weight: 800;
     }
     .page-main .main-title dl dt {
-        margin-top: 2rem;
-        font-size: 2.25rem;
+        margin-top: 28px;
+        font-size: 36px;
         font-weight: 700;
     }
     .page-main .main-title dl dd {
-        margin-top: 1rem;
-        font-size: 1.25rem;
+        margin-top: 16px;
+        font-size: 20px;
         line-height: 1.6;
         color: var(--sub-txt);
     }
 
     .page-main .project-container {
-        border: 2px solid var(--black);
-        border-right: none;
+        border-top: 2px solid var(--black);
+        border-left: 2px solid var(--black);
+    }
+
+    .page-main .project-container .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .page-main .project-container .list > li {
+        padding: 32px;
+        border-right: 2px solid var(--black);
+        border-bottom: 2px solid var(--black);
+    }
+    .page-main .project-container .list.project > li {
+        width: calc(100% / 4);
+    }
+    .page-main .project-container .list.work > li {
+        width: calc(100% / 3);
+    }
+    .page-main .project-container .list .thumbnail {
+        transition: 0.2s ease-out;
+    }
+    .page-main .project-container .list.project .thumbnail {
+        height: 250px;
+    }
+    .page-main .project-container .list.work .thumbnail {
+        height: 242px;
+    }
+    .page-main .project-container .list .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .page-main .project-container .list > li:hover .thumbnail {
+        transform: translateY(-4px);
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+    }
+    .page-main .project-container .list dl {
+        margin-top: 1.5rem;
+    }
+    .page-main .project-container .list dl dt {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .page-main .project-container .list dl dd {
+        margin-top: 8px;
+        color: var(--sub-txt);
+    }
+
+    @media (max-width: 1024px) {
+        .page-main .main-title h1 {
+            font-size: 120px;
+        }
+        .page-main .main-title dl dt {
+            font-size: 28px;
+        }
+        .page-main .main-title dl dd {
+            font-size: 18px;
+        }
+        .page-main .project-container .list.project > li {
+            width: calc(100% / 2);
+        }
+        .page-main .project-container .list.work > li {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .page-main .main-title {
+            padding: 50px 0 80px 0;
+        }
+        .page-main .main-title h1 {
+            font-size: 80px;
+        }
+        .page-main .main-title .img-box {
+            width: 240px;
+            height: 163px;
+        }
+        .page-main .main-title .img-box .heart {
+            width: 43px;
+            height: 42px;
+        }
+        .page-main .main-title .img-box .hand {
+            width: 59px;
+            height: 90px;
+        }
+        .page-main .main-title dl dt {
+            font-size: 24px;
+        }
+        .page-main .main-title dl dd {
+            font-size: 16px;
+        }
+        .page-main .project-container .list > li {
+            padding: 20px 20px 24px 20px;
+        }
+        .page-main .project-container .list.project > li {
+            width: 100%;
+        }
+        .page-main .project-container .list.project .thumbnail {
+            height: 180px;
+        }
+        .page-main .project-container .list.work .thumbnail {
+            height: 160px;
+        }
+        .page-main .project-container .list dl dt {
+            font-size: 20px;
+        }
     }
 /* E : 메인 */
