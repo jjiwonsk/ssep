@@ -51,6 +51,12 @@
             font-size: 24px;
             font-weight: 900;
         }
+
+        @media (max-width: 767px) {
+            #header nav ul li {
+                padding: 0 8px;
+            }
+        }
     /* E : header */
 
     #wrap {
@@ -76,27 +82,80 @@
         margin: 0 auto;
     }
 
-    /* S : floating */
-        .floating-wrap {
-            position: fixed;
-            right: 52px;
-            bottom: 52px;
-        }
-        .floating-wrap .btn-float {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            border-radius: 100%;
-            background: var(--black);
-        }
-    /* E : floating */
+/* E : layout */
 
-    @media (max-width: 767px) {
-        #header nav ul li {
-            padding: 0 8px;
+/* S : floating */
+
+    .floating-wrap {
+        position: fixed;
+        right: 52px;
+        bottom: 52px;
+    }
+    .floating-wrap .btn-float {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background: var(--black);
+    }
+
+/* E : floating */
+
+/* S : popup */
+    
+    .popup-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10001;
+    }
+    .popup-wrap::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+    }
+    .popup-wrap .popup {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 1200px;
+        width: 100%;
+        max-height: 90vh;
+        padding: 20px 40px 40px 40px;
+        background: var(--white);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        border: 2px solid var(--black);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.20);
+    }
+    .popup-wrap .popup .popup-header {
+        text-align: right;
+        margin-bottom: 1.2rem;
+    }
+    .popup-wrap .popup .popup-content {
+        text-align: center;
+    }
+
+    @media (max-width: 1200px) {
+        .popup-wrap .popup {
+            width: calc(100% - 48px);
         }
     }
 
-/* E : layout */
+    @media (max-width: 767px) {
+        .popup-wrap .popup {
+            padding: 16px 24px 24px 24px;
+        }
+    }
+
+/* E : popup */

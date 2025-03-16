@@ -29,4 +29,24 @@ $(function() {
     $topBtn.onclick = () => {
         $topTarget.scrollTo({ top: 0, behavior: "smooth" });
     };
+
+    // 팝업 열기
+    window.popupOpen = function (number) {
+        $(".popup-wrap").eq(number).fadeIn();
+    };
+
+    // 팝업 닫기
+    $(".popup-close").click(function (e) {
+        e.preventDefault();
+        $(this).closest(".popup-wrap").fadeOut();
+    });
+
+    // 외부영역 클릭시 팝업 닫기
+    $(document).mouseup(function (e) {
+        let popup = $(".popup");
+        // 클릭한 위치(e.target)가 .popup이 아니라면 팝업 닫기
+        if (!popup.is(e.target) && popup.has(e.target).length === 0) {
+            $(".popup-wrap").fadeOut();
+        }
+    });
 });
