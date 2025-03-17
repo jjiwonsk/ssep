@@ -16,9 +16,11 @@ $(function() {
         $("#to-work").click(function (e) {
             e.preventDefault(); // 기본 동작 방지
     
+            let targetOffset = $("#scroll-work").offset().top - 60; // 위쪽 여백 추가
+    
             $("#wrap .inner").animate({
-                scrollTop: $("#scroll-work").offset().top
-            }, 500); // 500ms 동안 부드럽게 스크롤
+                scrollTop: targetOffset
+            }, 500); // 500ms 동안 부드러운 스크롤
         });
     });
 

@@ -52,6 +52,10 @@
             font-weight: 900;
         }
 
+        #header.header-sub nav {
+            display: none;
+        }
+
         @media (max-width: 767px) {
             #header nav ul li {
                 padding: 0 8px;
@@ -159,3 +163,26 @@
     }
 
 /* E : popup */
+
+/* S : button */
+
+    .btn-wrap {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+
+    .btn {
+        padding: 1rem 1.5rem;
+        background: var(--bg);
+        border: 1px solid var(--black);
+        border-radius: 1px;
+        font-weight: 500;
+        transition: 0.2s ease-out;
+    }
+    .btn:hover {
+        background: var(--black);
+        color: var(--white);
+    }
+
+/* E : button */
