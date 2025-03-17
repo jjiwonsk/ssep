@@ -11,10 +11,10 @@
         width: 314px;
         height: 213px;
         margin: 0 auto;
-        background: url("../img/main/main_default.png") no-repeat center center/contain;
+        background: url("/img/main/main_default.png") no-repeat center center/contain;
     }
     .page-main .main-title .img-box:hover {
-        background: url("../img/main/main_hover.png") no-repeat center center/contain;
+        background: url("/img/main/main_hover.png") no-repeat center center/contain;
     }
     .page-main .main-title .img-box .heart {
         position: absolute;
