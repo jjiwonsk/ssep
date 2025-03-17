@@ -1,6 +1,6 @@
 $(function() {
     // header 불러오기
-    $("#header").load("/layout/header.html", function() {
+    $("#header").load("../../layout/header.html", function() {
         // project로 스크롤 이동
         $("#to-project").click(function (e) {
             e.preventDefault(); // 기본 동작 방지
