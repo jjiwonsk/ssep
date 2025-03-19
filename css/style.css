@@ -303,14 +303,16 @@
         .page-sub .project-detail .detail-wrap {
             margin-top: 60px;
         }
+        .page-sub .project-info .info-des .tit-wrap > h2 br,
+        .page-sub .project-info .info-des > p br {
+            display: none;
+        }
     }
 
     @media (max-width: 499px) {
         .page-sub .project-info .info-des .tit-wrap > h2 {
             font-size: 32px;
         }
-        .page-sub .project-info .info-des .tit-wrap > h2 br,
-        .page-sub .project-info .info-des > p br,
         .page-sub .project-detail .detail-wrap .detail-title > p br {
             display: none;
         }
